@@ -172,6 +172,18 @@ curl -X POST http://localhost:3000/graphql \
 - POST リクエストで `http://localhost:3000/graphql`
 - Body: JSON形式でクエリを送信
 
+https://github.com/user-attachments/assets/4d257f75-6d71-4eb5-8b39-3fde7ab7c38e
+
+※ POST以外のリクエスト方法も可能
+1. POST (最も一般的)
+- Query、Mutation、Subscriptionすべてに使用可能
+- リクエストボディにクエリを含める
+- 複雑なクエリや機密データに適している
+2. GET (読み取り専用のQueryで使用可能)
+- URLパラメータでクエリを送信
+- キャッシュが効きやすい
+- ブラウザで直接アクセス可能
+
 ## 🎯 GraphQL学習のポイント
 
 ### 1. RESTとの違い
