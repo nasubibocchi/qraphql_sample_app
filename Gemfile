@@ -30,7 +30,7 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 # GraphQL gem for implementing GraphQL API
-gem "graphql", "~> 2.0"
+gem "graphql", "~> 2.5"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
