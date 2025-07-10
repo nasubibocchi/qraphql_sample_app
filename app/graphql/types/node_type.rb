@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # --relayオプション（デフォルトで有効）で作成される
-# 
+#
 # 役割:
 #   - 全てのオブジェクトに共通のidフィールドを提供
 #   - GraphQL RelayのGlobal Object Identificationを実現

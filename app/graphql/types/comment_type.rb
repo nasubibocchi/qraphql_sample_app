@@ -13,9 +13,9 @@ module Types
     # - RubyのTimeやDateTimeオブジェクトと自動変換
     # - タイムゾーン情報を含む
     # - GraphQLスキーマでフィールドやargumentの型として使用
-    # 
+    #
     # クライアント側では"2023-12-25T10:30:00Z"のような文字列として扱われ、サーバー側では自動的にRubyの日時オブジェクトに変換されます。
-    
+
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
