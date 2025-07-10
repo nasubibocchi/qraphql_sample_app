@@ -31,6 +31,12 @@ module Types
       argument :id, ID, required: true, description: "ユーザーID"
     end
 
+    # メールアドレスでユーザーを取得するクエリ
+    field :user_by_email, Types::UserType, null: true,
+          description: "メールアドレスを指定してユーザーを取得" do
+      argument :email, String, required: true, description: "メールアドレス"
+    end
+
     # すべての投稿を取得するクエリ
     field :posts, [ Types::PostType ], null: false,
           description: "すべての投稿一覧を取得"
@@ -47,6 +53,7 @@ module Types
 
     # GraphQL学習用: リゾルバーメソッド
     # これらのメソッドは対応するフィールドがクエリされたときに実行されます
+    # GraphQLではfield名とメソッド名を合わせることで自動的にリゾルバーが関連付けられます
 
     def users
       User.all
@@ -54,6 +61,10 @@ module Types
 
     def user(id:)
       User.find_by(id: id)
+    end
+
+    def user_by_email(email:)
+      User.find_by(email: email)
     end
 
     def posts
