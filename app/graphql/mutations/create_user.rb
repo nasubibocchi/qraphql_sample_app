@@ -14,6 +14,11 @@ module Mutations
 
     # GraphQL学習用: 戻り値の型を定義
     type Types::UserType
+    
+    # GraphQL学習用: fieldを直接定義する場合の例
+    # 複数の戻り値を持つ場合はこのように定義できます
+    # field :user, Types::UserType, null: true, description: "作成されたユーザー"
+    # field :errors, [String], null: false, description: "エラーメッセージ一覧"
 
     # GraphQL学習用: resolve メソッドは Mutation が実行されたときに呼び出されます
     def resolve(name:, email:)
